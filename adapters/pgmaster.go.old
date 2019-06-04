@@ -1,0 +1,34 @@
+//package adapters
+//
+//import (
+//	"fmt"
+//	"bytes"
+//	"strings"
+//
+//	"github.com/go-pg/pg"
+//	"github.com/go-pg/pg/orm"
+//)
+//
+//
+//func getTable(){
+//	db := pg.Connect(&pg.Options{
+//		User:            "postgres",
+//		Password:        "",
+//		Database:        "",
+//	})
+//	defer db.Close()
+//
+//
+//	_, err := pgdb.Exec(`CREATE TEMP TABLE words(word text, len int)`)
+//	panicIf(err)
+//
+//	r := strings.NewReader("hello,5\nfoo,3\n")
+//	_, err = pgdb.CopyFrom(r, `COPY words FROM STDIN WITH CSV`)
+//	panicIf(err)
+//
+//	var buf bytes.Buffer
+//	_, err = pgdb.CopyTo(&buf, `COPY words TO STDOUT WITH CSV`)
+//	panicIf(err)
+//	fmt.Println(buf.String())
+//
+//}
